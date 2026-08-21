@@ -1,14 +1,15 @@
 import { useState } from 'react';
+import Footer from './Footer';
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
     <div style={styles.container}>
-      <header style={styles.card}>
+      <div style={styles.card}>
         <h1 style={styles.title}>សូមស្វាគមន៍មកកាន់ ReactJS! 🚀</h1>
         <p style={styles.subtitle}>
-          នេះជាកម្មវិធីដំបូងរបស់អ្នកដែលបានបង្កើតឡើងដោយជោគជ័យ។
+          កម្មវិធីដំបូងរបស់អ្នកដែលបានរៀបចំនៅលើ GitHub
         </p>
 
         <div style={styles.counterBox}>
@@ -24,60 +25,60 @@ function App() {
               style={{ ...styles.button, ...styles.resetBtn }} 
               onClick={() => setCount(0)}
             >
-              កំណត់ឡើងវិញ
+              Reset
             </button>
             <button 
               style={{ ...styles.button, ...styles.incrementBtn }} 
               onClick={() => setCount(count + 1)}
             >
-              បន្ថែម (+)
+              ថែម (+)
             </button>
           </div>
         </div>
-      </header>
+
+        <Footer />
+      </div>
     </div>
   );
 }
 
-// Inline CSS Styles
 const styles = {
   container: {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
     minHeight: '100vh',
-    backgroundColor: '#f3f4f6',
+    backgroundColor: '#0f172a',
     fontFamily: 'system-ui, sans-serif',
     margin: 0,
   },
   card: {
-    backgroundColor: '#ffffff',
+    backgroundColor: '#1e293b',
     padding: '2.5rem',
     borderRadius: '16px',
-    boxShadow: '0 10px 25px rgba(0,0,0,0.08)',
+    boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.5)',
     textAlign: 'center',
-    maxWidth: '420px',
+    maxWidth: '400px',
     width: '90%',
+    color: '#f8fafc',
   },
   title: {
-    color: '#1f2937',
-    fontSize: '1.75rem',
+    fontSize: '1.5rem',
     marginBottom: '0.5rem',
   },
   subtitle: {
-    color: '#6b7280',
-    fontSize: '0.95rem',
+    color: '#94a3b8',
+    fontSize: '0.9rem',
     marginBottom: '2rem',
   },
   counterBox: {
-    backgroundColor: '#f9fafb',
+    backgroundColor: '#0f172a',
     padding: '1.5rem',
     borderRadius: '12px',
-    border: '1px solid #e5e7eb',
+    border: '1px solid #334155',
   },
   countText: {
     fontSize: '1.2rem',
-    color: '#374151',
     marginBottom: '1rem',
   },
   buttonGroup: {
@@ -91,10 +92,9 @@ const styles = {
     borderRadius: '8px',
     fontWeight: 'bold',
     cursor: 'pointer',
-    transition: 'opacity 0.2s',
   },
   incrementBtn: {
-    backgroundColor: '#2563eb',
+    backgroundColor: '#3b82f6',
     color: '#ffffff',
   },
   decrementBtn: {
@@ -102,10 +102,9 @@ const styles = {
     color: '#ffffff',
   },
   resetBtn: {
-    backgroundColor: '#9ca3af',
+    backgroundColor: '#64748b',
     color: '#ffffff',
   },
 };
 
 export default App;
-
